@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nutritional Content (per 100g)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .lang-btn { margin: 5px; padding: 10px 18px; font-size: 16px; cursor: pointer; }
+        .lang-content { display: none; margin-top: 15px; }
+        .active { display: block; }
+        .section { margin-bottom: 35px; }
+    </style>
+    <script>
+        function showContent(lang) {
+            var contents = document.getElementsByClassName('lang-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+            document.getElementById(lang).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h2>Nutritional Content (per 100g)</h2>
+    <button class="lang-btn" onclick="showContent('english')">English</button>
+    <button class="lang-btn" onclick="showContent('hindi')">Hindi</button>
+    <button class="lang-btn" onclick="showContent('marathi')">Marathi</button>
+    <button class="lang-btn" onclick="showContent('tamil')">Tamil</button>
+
+    <div id="english" class="lang-content active section">
+        <h3>English</h3>
+        <ul>
+            <li>Moisture: 4.5</li>
+            <li>Ash: 2.0</li>
+            <li>Protein: 9.8</li>
+            <li>Fat: 0.9</li>
+            <li>Carbohydrate: 63</li>
+            <li>Crude Fiber: 3.2</li>
+            <li>pH: 6</li>
+        </ul>
+    </div>
+
+    <div id="hindi" class="lang-content section">
+        <h3>Hindi</h3>
+        <ul>
+            <li>नमी (Nami): 4.5</li>
+            <li>राख (Raakh): 2.0</li>
+            <li>प्रोटीन (Protein): 9.8</li>
+            <li>वसा (Vasa): 0.9</li>
+            <li>कार्बोहाइड्रेट: 63</li>
+            <li>कच्चा फाइबर: 3.2</li>
+            <li>पीएच: 6</li>
+        </ul>
+    </div>
+
+    <div id="marathi" class="lang-content section">
+        <h3>Marathi</h3>
+        <ul>
+            <li>ओलावा (Olava): 4.5</li>
+            <li>राख (Raakh): 2.0</li>
+            <li>प्रथिने (Prathine): 9.8</li>
+            <li>चरबी (Charabi): 0.9</li>
+            <li>कार्बोदके: 63</li>
+            <li>कच्चा फायबर: 3.2</li>
+            <li>पीएच: 6</li>
+        </ul>
+    </div>
+
+    <div id="tamil" class="lang-content section">
+        <h3>Tamil</h3>
+        <ul>
+            <li>ஈரப்பதம் (Irappatam): 4.5</li>
+            <li>சாம்பல் (Campal): 2.0</li>
+            <li>புரதம் (Puratham): 9.8</li>
+            <li>கொழுப்பு (Koluppu): 0.9</li>
+            <li>கார்போஹைட்ரேட்: 63</li>
+            <li>கச்சா நார்ச்சத்து: 3.2</li>
+            <li>pH: 6</li>
+        </ul>
+    </div>
+</body>
+</html>
